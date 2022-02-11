@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/Material/Material.module';
 import { GaugeModule } from 'angular-gauge';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, SearchBarComponent],
@@ -16,6 +17,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     BrowserAnimationsModule,
     MaterialModule,
     GaugeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
