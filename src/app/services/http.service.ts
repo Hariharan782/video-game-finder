@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { env } from 'process';
+import { environment as env } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { APIResponse, Game } from '../model';
 

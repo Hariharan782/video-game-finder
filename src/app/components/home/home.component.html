@@ -14,22 +14,29 @@
 </div>
 
 <div class="games">
-  <div class="game">
-    <div class="game-thumb-container">
-      <img
-        src="https://cdn.vox-cdn.com/thumbor/RG957-Q8ojKoDX2NGsAr5JBfomQ=/0x0:1800x1272/920x613/filters:focal(1016x16:1304x304):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66796554/ar4ig.0.jpg"
-        alt="thumbnail"
-        class="game-thumbnail"
-      />
-      <div>
-        <div class="game-description"><p class="game-name">Name</p></div>
-        <div class="game-platforms"></div>
+  <ng-container *ngFor="let game of games">
+    <div class="game">
+      <div class="game-thumb-container">
         <img
-          class="game-platform"
-          src="data:image/png;base64,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"
-          alt="slug"
+          *ngIf="game.background_image"
+          src="{{ game.background_image }}"
+          alt="thumbnail"
+          class="game-thumbnail"
         />
+        <p *ngIf="!game.background_image">NO IMAGE</p>
+        <div>
+          <div class="game-description">
+            <p class="game-name">{{ game.name }}</p>
+          </div>
+          <div class="game-platform"></div>
+          <img
+            *ngFor="let gamePlatform of game.parent_platform"
+            class="game-platform"
+            src="assets/images/platforms/{{ gamePlatform.platform.slug }}.svg"
+            alt="{{ gamePlatform.platform.slug }}"
+          />
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 </div>

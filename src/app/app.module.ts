@@ -9,7 +9,7 @@ import { GaugeModule } from 'angular-gauge';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { httpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 
 @NgModule({
@@ -21,6 +21,7 @@ import { httpHeadersInterceptor } from './interceptors/http-headers.interceptor'
     MaterialModule,
     GaugeModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [
     {
