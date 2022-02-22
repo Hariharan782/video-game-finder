@@ -10,28 +10,36 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { httpHeadersInterceptor } from './interceptors/http-headers.interceptor';
+import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
+import { DetailsComponent } from './components/details/details.component';
+import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    SearchBarComponent,
+    HomeComponent,
+    DetailsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     GaugeModule,
+    GaugeModule.forRoot(),
     FormsModule,
     HttpClientModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: httpHeadersInterceptor,
+      useClass: HttpHeadersInterceptor,
       multi: true,
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: httpHeadersInterceptor,
+      useClass: HttpErrorsInterceptor,
       multi: true,
     },
   ],

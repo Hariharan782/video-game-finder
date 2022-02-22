@@ -1,0 +1,31 @@
+<div class="details">
+  <div class="" game banner>
+    <img
+      class="game-banner-image"
+      src="https://media.istockphoto.com/photos/the-city-of-london-skyline-at-night-united-kingdom-picture-id1312550959?b=1&k=20&m=1312550959&s=170667a&w=0&h=RR30MGnFgyX2LnmvrffOsiaXkhB-oEuMkvtqu4JyVI0="
+      alt="background_image"
+    />
+  </div>
+  <div class="game-content">
+    <div class="details-wrapper">
+      <div class="game-header">
+        <h1 class="game-header-title">GAme NAME</h1>
+        <h2 class="game-header-release-date">RELEASED 1.2.4 2020</h2>
+        <p class="game-header-genres"><span>RPG</span></p>
+        <div class="game-gauge">
+          <mwl-gauge
+            class="two"
+            [max]="100"
+            [dialStartAngle]="180"
+            [dialEndAngle]="0"
+            [value]="gameRating"
+            [animated]="true"
+            [color]="getColor"
+            [animationDuration]="3"
+          ></mwl-gauge>
+          <a class="game-gauge-label" target="_blank" href="">Metacrituc</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
