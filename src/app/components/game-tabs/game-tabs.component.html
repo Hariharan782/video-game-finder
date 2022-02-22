@@ -34,10 +34,10 @@
         </ng-container>
       </p>
     </mat-tab>
-    <mat-tab label="Screenshots" *ngIf="game.screenshot?.length">
+    <mat-tab label="Screenshots" *ngIf="game.screenshots?.length">
       <img
         class="game-screenshot"
-        *ngFor="let screenshot of game.screenshot"
+        *ngFor="let screenshot of game.screenshots"
         src="{{ screenshot.image }}"
         alt="Screenshots"
       /> </mat-tab
