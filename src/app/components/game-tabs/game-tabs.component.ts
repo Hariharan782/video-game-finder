@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Game } from 'src/app/model';
 
 @Component({
   selector: 'app-game-tabs',
   templateUrl: './game-tabs.component.html',
-  styleUrls: ['./game-tabs.component.css']
+  styleUrls: ['./game-tabs.component.css'],
 })
 export class GameTabsComponent implements OnInit {
+  @Input() game: Game;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
